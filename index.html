@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VidyaSwap | Where Knowledge Is Currency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --saffron: #ff9933;
+      --navy: #0a2540;
+      --purple: #8a2be2;
+      --light: #f5f7fb;
+    }
+    body {
+      font-family: "Inter", "Noto Sans", system-ui;
+      background: radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.3), transparent 40%), #04102b;
+      color: #fff;
+      margin: 0;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 10px 40px rgba(4, 16, 43, 0.5);
+    }
+    .gradient-border {
+      background: linear-gradient(120deg, rgba(255, 153, 51, 0.8), rgba(138, 43, 226, 0.9));
+      padding: 2px;
+      border-radius: 18px;
+    }
+    .gradient-border .inner {
+      background: #050b1b;
+      border-radius: 16px;
+      padding: 2rem;
+    }
+    .badge-purple {
+      background: rgba(138, 43, 226, 0.15);
+      border: 1px solid rgba(138, 43, 226, 0.4);
+      color: #dcd7ff;
+      padding: 0.15rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    .smooth-shadow {
+      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.4);
+    }
+    .section-title {
+      font-size: clamp(1.85rem, 3vw, 2.6rem);
+      font-weight: 700;
+    }
+    .ai-card:hover {
+      transform: translateY(-6px);
+    }
+    .animate-line {
+      position: relative;
+    }
+    .animate-line::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, var(--saffron), var(--purple));
+    }
+    @media (max-width: 768px) {
+      body {
+        background: #030712;
+      }
+      .gradient-border .inner {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#030712]">
+  <div class="min-h-screen relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.15),_transparent_55%)] pointer-events-none"></div>
+    <header class="relative z-10">
+      <nav class="flex items-center justify-between px-6 py-5 lg:px-12">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#ff9933] to-purple-500 flex items-center justify-center text-xl font-bold text-white shadow-2xl">VS</div>
+          <div>
+            <p class="text-sm uppercase tracking-widest text-[#d9e3ff]">VidyaSwap</p>
+            <p class="text-xs text-[#9fb4d2]">Where Knowledge Is Currency</p>
+          </div>
+        </div>
+        <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-[#d8e1f5]">
+          <a href="#problem" class="hover:text-white transition">Problem</a>
+          <a href="#ai-features" class="hover:text-white transition">AI</a>
+          <a href="#onboarding" class="hover:text-white transition">Onboarding</a>
+          <a href="#dashboard" class="hover:text-white transition">Dashboard</a>
+          <a href="#matchmaker" class="hover:text-white transition">Matchmaker</a>
+          <a href="#roadmap" class="hover:text-white transition">Roadmap</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button class="text-sm font-semibold px-4 py-2 rounded-full border border-white/30 text-white hover:bg-white hover:text-[#0a2540] transition">Sign In</button>
+          <button class="text-sm font-semibold px-4 py-2 rounded-full bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] shadow-lg">Start Matching</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="px-6 lg:px-12 pb-20 relative z-10">
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[70vh] pt-8">
+        <div class="space-y-6">
+          <p class="text-sm uppercase tracking-[0.4em] text-[#9fb4d2]">AI Multilingual Skill Exchange</p>
+          <h1 class="section-title leading-tight text-white">
+            Learn Without Paying. Teach Without Limits.
+          </h1>
+          <p class="text-[#d8e3ff] text-lg lg:text-xl max-w-2xl">
+            India's AI-powered multilingual skill exchange network. VidyaSwap lets learners trade real skills, build portfolios, and earn SkillCoin by teaching others.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button class="px-6 py-3 text-sm font-semibold rounded-full bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] shadow-lg transform transition hover:-translate-y-1">Start Learning</button>
+            <button class="px-6 py-3 text-sm font-semibold rounded-full border border-white/30 text-white hover:bg-white hover:text-[#0a2540] transition">Become a Teacher</button>
+          </div>
+          <div class="flex flex-wrap gap-3 text-xs text-[#9fb4d2]">
+            <span class="badge-purple">AI Skill Matchmaker</span>
+            <span class="badge-purple">Multilingual Translation Layer</span>
+            <span class="badge-purple">SkillCoin Rewards</span>
+          </div>
+        </div>
+        <div class="glass-card rounded-[32px] p-8 smooth-shadow relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#ff9933] via-transparent to-[#0a2540]" style="opacity:0.08;"></div>
+          <div class="relative z-10">
+            <p class="text-sm text-[#ffd089] mb-2">AI Visual Exchange</p>
+            <div class="rounded-3xl border border-white/30 bg-[#0b1b38]/90 p-6">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <p class="text-xs uppercase text-[#9fb4d2]">Priya</p>
+                  <p class="text-lg font-semibold">Teaching JavaScript</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-xs text-[#9fb4d2]">Learning</p>
+                  <p class="text-lg font-semibold">Urdu Conversation</p>
+                </div>
+              </div>
+              <div class="bg-white/10 border border-white/10 rounded-2xl p-4 space-y-2">
+                <p class="text-sm text-[#d8e3ff]">AI bridges skills via avatars & live translation</p>
+                <div class="flex items-center gap-3 text-xs text-[#ffd7a3]">
+                  <span>AI Coach</span>
+                  <span>Multilingual Sync</span>
+                  <span>SkillCoin Earned: 42</span>
+                </div>
+              </div>
+              <div class="mt-4 grid grid-cols-3 gap-3 text-center text-xs text-[#9fb4d2]">
+                <div class="py-2 bg-white/5 rounded-2xl">Adaptive Pace</div>
+                <div class="py-2 bg-white/5 rounded-2xl">Live Captions</div>
+                <div class="py-2 bg-white/5 rounded-2xl">Portfolio Ready</div>
+              </div>
+            </div>
+            <div class="mt-6 text-xs text-[#9fb4d2]">
+              <span class="badge-purple">AI Translation Layer</span>
+              <span class="ml-3">Hindi ↔ English ↔ Tamil synched live.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="problem" class="mt-20 space-y-10">
+        <div class="section-title animate-line">Problem</div>
+        <div class="grid gap-6 lg:grid-cols-3">
+          <div class="glass-card rounded-[28px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Access</p>
+            <h3 class="text-xl font-semibold text-white">Cost Barrier</h3>
+            <p class="text-[#d3daf4]">Millions in tier-2/3 cities can't afford premium courses. VidyaSwap converts skills into currency allowing barter-based growth.</p>
+          </div>
+          <div class="glass-card rounded-[28px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Language</p>
+            <h3 class="text-xl font-semibold text-white">Fragmented Learning</h3>
+            <p class="text-[#d3daf4]">English bias leaves rural learners behind. Our AI translation layer makes regional languages first class.</p>
+          </div>
+          <div class="glass-card rounded-[28px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Trust</p>
+            <h3 class="text-xl font-semibold text-white">Skill Validation</h3>
+            <p class="text-[#d3daf4]">Hiring teams need trust. The AI reputation engine verifies skills via blockchain and community feedback.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="mt-24">
+        <div class="section-title animate-line">How VidyaSwap Works</div>
+        <div class="grid gap-6 lg:grid-cols-3 mt-8">
+          <div class="glass-card rounded-[32px] p-6 space-y-4 hover:border-white/40 transition">
+            <p class="badge-purple inline-flex items-center gap-1">01 AI Matchmaker</p>
+            <h3 class="text-2xl font-semibold">Find Your Skill Twin</h3>
+            <p class="text-[#d3daf4] text-sm">Complementary skills means Priya teaching JavaScript will meet Aarav craving Urdu.</p>
+          </div>
+          <div class="glass-card rounded-[32px] p-6 space-y-4 hover:border-white/40 transition">
+            <p class="badge-purple inline-flex items-center gap-1">02 Learning Roadmaps</p>
+            <h3 class="text-2xl font-semibold">AI Guided Journeys</h3>
+            <p class="text-[#d3daf4] text-sm">Roadmaps adapt to your style. Learn coding? We'll schedule mentors, labs, and weekend sprints.</p>
+          </div>
+          <div class="glass-card rounded-[32px] p-6 space-y-4 hover:border-white/40 transition">
+            <p class="badge-purple inline-flex items-center gap-1">03 SkillCoin Economy</p>
+            <h3 class="text-2xl font-semibold">Teach & Earn</h3>
+            <p class="text-[#d3daf4] text-sm">Offer lessons, earn SkillCoins, unlock verified credentials, and pay it forward to new learners.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ai-features" class="mt-24">
+        <div class="section-title animate-line">AI Features</div>
+        <div class="grid gap-6 lg:grid-cols-3 mt-8">
+          <div class="ai-card glass-card rounded-[32px] p-6 transition duration-300">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-semibold">AI Skill Matchmaker</h3>
+              <span class="badge-purple">Purple AI</span>
+            </div>
+            <p class="text-[#d3daf4] text-sm mb-4">Realtime compat scores, language bridging, and explainable AI reasoning.</p>
+            <ul class="list-disc list-inside text-[#cdd7ff] text-sm space-y-2">
+              <li>Complementary skills, time zones, tone matched</li>
+              <li>Trust score feeds to match safe & verified mentors</li>
+              <li>Explainable reason panel highlights why you match</li>
+            </ul>
+          </div>
+          <div class="ai-card glass-card rounded-[32px] p-6 transition duration-300">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-semibold">AI Learning Roadmaps</h3>
+              <span class="badge-purple">Purple AI</span>
+            </div>
+            <p class="text-[#d3daf4] text-sm mb-4">Adaptive pacing, recommended mentors, and weekly sprint reminders.</p>
+            <ul class="list-disc list-inside text-[#cdd7ff] text-sm space-y-2">
+              <li>Focus areas, strengths & weak topics highlighted</li>
+              <li>AI coach nudges via WhatsApp, Voice, and email</li>
+              <li>Weekly goals visualized per milestone</li>
+            </ul>
+          </div>
+          <div class="ai-card glass-card rounded-[32px] p-6 transition duration-300">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-semibold">AI Translation Layer</h3>
+              <span class="badge-purple">Purple AI</span>
+            </div>
+            <p class="text-[#d3daf4] text-sm mb-4">Hindi, Tamil, Urdu, Bengali, Marathi, Telugu, Kannada translations in seconds.</p>
+            <ul class="list-disc list-inside text-[#cdd7ff] text-sm space-y-2">
+              <li>Live subtitles for video calls</li>
+              <li>Session transcript auto-synced</li>
+              <li>Regional content curated by AI editors</li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8">
+          <div class="ai-card glass-card rounded-[32px] p-6 transition duration-300">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-semibold">AI Skill Verification</h3>
+              <span class="badge-purple">Purple AI</span>
+            </div>
+            <p class="text-[#d3daf4] text-sm mb-4">Blockchain-verified badges, AI reviewed projects, and real assessments.</p>
+            <ul class="list-disc list-inside text-[#cdd7ff] text-sm space-y-2">
+              <li>Project & quiz moderation</li>
+              <li>AI feedback loops for improvement</li>
+              <li>Certification ready with one click</li>
+            </ul>
+          </div>
+          <div class="ai-card glass-card rounded-[32px] p-6 transition duration-300">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-semibold">AI Career Coach</h3>
+              <span class="badge-purple">Purple AI</span>
+            </div>
+            <p class="text-[#d3daf4] text-sm mb-4">Job matches, resume scoring, interview prep in local languages.</p>
+            <ul class="list-disc list-inside text-[#cdd7ff] text-sm space-y-2">
+              <li>Job board filtered by region and salary</li>
+              <li>Career path suggestions and skill gaps</li>
+              <li>Interview readiness badges</li>
+            </ul>
+          </div>
+          <div class="ai-card glass-card rounded-[32px] p-6 transition duration-300">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-xl font-semibold">AI Reputation Engine</h3>
+              <span class="badge-purple">Purple AI</span>
+            </div>
+            <p class="text-[#d3daf4] text-sm mb-4">Trust scores, moderation, fraud detection, and community health tracking.</p>
+            <ul class="list-disc list-inside text-[#cdd7ff] text-sm space-y-2">
+              <li>Community reviews + AI fraud alerts</li>
+              <li>Skill validations with problem-specific rubrics</li>
+              <li>Reputation history for mentors & learners</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-24">
+        <div class="section-title animate-line">Success Stories</div>
+        <div class="grid gap-6 lg:grid-cols-3 mt-8">
+          <div class="glass-card rounded-[28px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Freelancer</p>
+            <h3 class="text-2xl font-semibold">Rekha from Rajkot</h3>
+            <p class="text-[#d3daf4]">Taught tailoring & graduated to digital commerce skills with AI coach. Earned 180 SkillCoins & consistent clients.</p>
+          </div>
+          <div class="glass-card rounded-[28px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Student</p>
+            <h3 class="text-2xl font-semibold">Arvind from Varanasi</h3>
+            <p class="text-[#d3daf4]">Swapped Excel lessons for Hindi writing practice. Built a portfolio, now teaching data visualization.</p>
+          </div>
+          <div class="glass-card rounded-[28px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Career Switcher</p>
+            <h3 class="text-2xl font-semibold">Nisha from Pune</h3>
+            <p class="text-[#d3daf4]">AI matchmaker paired her with a UI mentor. Skill verification and certifications secured a tech role.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-24 grid gap-6 lg:grid-cols-3">
+        <div class="glass-card rounded-[32px] p-6 space-y-4">
+          <p class="text-sm text-[#ffd7a3]">Impact Numbers</p>
+          <h3 class="text-4xl font-semibold text-white">600M learners</h3>
+          <p class="text-[#d3daf4]">On course to serve every Indian learner, homemaker, freelancer, and student.</p>
+        </div>
+        <div class="glass-card rounded-[32px] p-6 space-y-4">
+          <p class="text-sm text-[#ffd7a3]">SkillCoin</p>
+          <h3 class="text-4xl font-semibold text-white">2.1B+</h3>
+          <p class="text-[#d3daf4]">SkillCoin exchanged and reinvested into teaching communities.</p>
+        </div>
+        <div class="glass-card rounded-[32px] p-6 space-y-4">
+          <p class="text-sm text-[#ffd7a3]">AI Matches</p>
+          <h3 class="text-4xl font-semibold text-white">98%</h3>
+          <p class="text-[#d3daf4]">Compatibility with trust scores above 90.</p>
+        </div>
+      </section>
+
+      <section id="onboarding" class="mt-24 rounded-[36px] border border-white/15 p-6 lg:p-10 glass-card">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div>
+            <p class="text-sm text-[#ffd7a3]">Onboarding</p>
+            <h2 class="section-title">Personalized Flow</h2>
+            <p class="text-[#d3daf4] max-w-xl">Select language, goals, share what you can teach, and let AI craft your learning profile.</p>
+          </div>
+          <div class="flex gap-3">
+            <button class="text-sm px-4 py-2 rounded-full border border-white/30" data-step="1">01 Language</button>
+            <button class="text-sm px-4 py-2 rounded-full border border-white/30" data-step="2">02 Goals</button>
+            <button class="text-sm px-4 py-2 rounded-full border border-white/30" data-step="3">03 Teach Skills</button>
+            <button class="text-sm px-4 py-2 rounded-full border border-white/30" data-step="4">04 AI Profile</button>
+          </div>
+        </div>
+        <div class="mt-8 grid gap-6 lg:grid-cols-2">
+          <div class="glass-card rounded-[28px] p-6" id="onboarding-details">
+            <!-- JS will inject -->
+          </div>
+          <div class="glass-card rounded-[28px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Multilingual Options</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-3 py-1 rounded-full bg-white/10">Hindi</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">English</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Urdu</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Tamil</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Bengali</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Marathi</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Telugu</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Kannada</span>
+            </div>
+            <p class="text-[#d3daf4] text-sm">AI auto detects spoken language preferences for seamless learning.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="mt-24 grid gap-6 lg:grid-cols-[2fr,1fr]">
+        <div class="glass-card rounded-[36px] p-8">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <p class="text-sm text-[#ffd7a3]">VidyaSwap Dashboard</p>
+              <h2 class="text-3xl font-semibold">Welcome back, Riya</h2>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="text-sm text-[#d3daf4]">
+                <p>SkillCoin</p>
+                <p class="text-xl font-semibold text-white">452</p>
+              </div>
+              <div class="text-sm text-[#d3daf4]">
+                <p>Trust Score</p>
+                <p class="text-xl font-semibold text-white">94/100</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 grid gap-6 lg:grid-cols-3">
+            <div class="rounded-[28px] bg-white/5 p-5">
+              <p class="text-xs text-[#ffd7a3]">Current Progress</p>
+              <p class="text-xl font-semibold">AI Learning Roadmap</p>
+              <div class="w-full h-2 mt-4 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-[#ff9933] to-purple-500" style="width:68%"></div>
+              </div>
+              <p class="text-sm text-[#d3daf4] mt-2">React Module - 68%</p>
+            </div>
+            <div class="rounded-[28px] bg-white/5 p-5">
+              <p class="text-xs text-[#ffd7a3]">AI Suggestions</p>
+              <p class="text-xl font-semibold">Matches</p>
+              <p class="text-sm text-[#d3daf4] mt-3">Priya Sharma (JS) — 94% compatibility</p>
+            </div>
+            <div class="rounded-[28px] bg-white/5 p-5">
+              <p class="text-xs text-[#ffd7a3]">Upcoming</p>
+              <p class="text-xl font-semibold">Sessions</p>
+              <p class="text-sm text-[#d3daf4] mt-3">Design Sprint with Arjun • Today 6 PM</p>
+            </div>
+          </div>
+          <div class="mt-8 grid gap-4 md:grid-cols-4 text-center text-sm">
+            <button class="py-3 rounded-2xl bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] font-semibold">Find Match</button>
+            <button class="py-3 rounded-2xl border border-white/20 text-white font-semibold">Start Learning</button>
+            <button class="py-3 rounded-2xl border border-white/20 text-white font-semibold">Teach Skills</button>
+            <button class="py-3 rounded-2xl border border-white/20 text-white font-semibold">Career Coach</button>
+          </div>
+        </div>
+        <div class="glass-card rounded-[36px] p-6 space-y-6 bg-[#0a1a34]/90">
+          <p class="text-sm text-[#ffd7a3]">Quick Snapshot</p>
+          <div class="space-y-2">
+            <p class="text-xs text-[#9fb4d2]">SkillCoin Balance</p>
+            <p class="text-3xl font-semibold">452</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-xs text-[#9fb4d2]">Trust Score</p>
+            <p class="text-2xl font-semibold">94</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-xs text-[#9fb4d2]">Current Learning</p>
+            <p class="text-2xl font-semibold">React • Node.js</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-xs text-[#9fb4d2]">Matches</p>
+            <p class="text-2xl font-semibold">4 Active</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="matchmaker" class="mt-24">
+        <div class="section-title animate-line">AI Skill Matchmaker</div>
+        <div class="grid gap-6 lg:grid-cols-3 mt-8">
+          <div class="glass-card rounded-[32px] p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm text-[#ffd7a3]">Priya Sharma</p>
+                <h3 class="text-2xl font-semibold">JavaScript Mentor</h3>
+                <p class="text-[#d3daf4] text-sm">Mumbai</p>
+              </div>
+              <div class="text-right">
+                <p class="text-sm text-[#9fb4d2]">Trust Score</p>
+                <p class="text-xl font-semibold">95</p>
+              </div>
+            </div>
+            <div class="flex justify-between text-xs text-[#d3daf4]">
+              <span>Skills Offered: JS, React, Next.js</span>
+              <span>Skills Wanted: Urdu, Hindi</span>
+            </div>
+            <div class="flex justify-between text-xs text-[#d3daf4]">
+              <span>Languages: English, Hindi</span>
+              <span>Compatibility: 94%</span>
+            </div>
+            <p class="text-sm text-[#ffd7a3]">Matched because:</p>
+            <ul class="list-disc list-inside text-[#d3daf4] text-sm">
+              <li>Complementary goals</li>
+              <li>Free weekend slots</li>
+              <li>Shared Hindi support</li>
+            </ul>
+            <div class="flex gap-3">
+              <button class="flex-1 rounded-2xl bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] py-2 text-sm font-semibold">Connect</button>
+              <button class="flex-1 rounded-2xl border border-white/30 py-2 text-sm font-semibold">View Profile</button>
+            </div>
+          </div>
+          <div class="glass-card rounded-[32px] p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm text-[#ffd7a3]">Arjun Patel</p>
+                <h3 class="text-2xl font-semibold">UI Designer</h3>
+                <p class="text-[#d3daf4] text-sm">Bengaluru</p>
+              </div>
+              <div class="text-right">
+                <p class="text-sm text-[#9fb4d2]">Trust Score</p>
+                <p class="text-xl font-semibold">91</p>
+              </div>
+            </div>
+            <div class="flex justify-between text-xs text-[#d3daf4]">
+              <span>Skills Offered: Design Systems, Figma</span>
+              <span>Skills Wanted: Marathi</span>
+            </div>
+            <div class="flex justify-between text-xs text-[#d3daf4]">
+              <span>Languages: English, Kannada</span>
+              <span>Compatibility: 89%</span>
+            </div>
+            <p class="text-sm text-[#ffd7a3]">Matched because:</p>
+            <ul class="list-disc list-inside text-[#d3daf4] text-sm">
+              <li>Shared goal: Product Design</li>
+              <li>Available weekday mornings</li>
+              <li>AI moderated schedule</li>
+            </ul>
+            <div class="flex gap-3">
+              <button class="flex-1 rounded-2xl bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] py-2 text-sm font-semibold">Connect</button>
+              <button class="flex-1 rounded-2xl border border-white/30 py-2 text-sm font-semibold">View Profile</button>
+            </div>
+          </div>
+          <div class="glass-card rounded-[32px] p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm text-[#ffd7a3]">Ayesha Khan</p>
+                <h3 class="text-2xl font-semibold">Urdu & Storytelling</h3>
+                <p class="text-[#d3daf4] text-sm">Lucknow</p>
+              </div>
+              <div class="text-right">
+                <p class="text-sm text-[#9fb4d2]">Trust Score</p>
+                <p class="text-xl font-semibold">93</p>
+              </div>
+            </div>
+            <div class="flex justify-between text-xs text-[#d3daf4]">
+              <span>Skills Offered: Urdu, Storytelling</span>
+              <span>Skills Wanted: JavaScript</span>
+            </div>
+            <div class="flex justify-between text-xs text-[#d3daf4]">
+              <span>Languages: Urdu, Hindi</span>
+              <span>Compatibility: 92%</span>
+            </div>
+            <p class="text-sm text-[#ffd7a3]">Matched because:</p>
+            <ul class="list-disc list-inside text-[#d3daf4] text-sm">
+              <li>Tech + cultural storytelling</li>
+              <li>AI schedule synced at 8 PM</li>
+              <li>Shared community hangouts</li>
+            </ul>
+            <div class="flex gap-3">
+              <button class="flex-1 rounded-2xl bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] py-2 text-sm font-semibold">Connect</button>
+              <button class="flex-1 rounded-2xl border border-white/30 py-2 text-sm font-semibold">View Profile</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="mt-24 grid gap-6 lg:grid-cols-2">
+        <div class="glass-card rounded-[36px] p-8 space-y-6">
+          <p class="text-sm text-[#ffd7a3]">Learning Roadmap</p>
+          <h2 class="text-3xl font-semibold">AI Learning Roadmap</h2>
+          <div class="space-y-3">
+            <div class="flex justify-between text-sm text-[#d3daf4]">
+              <span>HTML ✓</span>
+              <span>Completed</span>
+            </div>
+            <div class="flex justify-between text-sm text-[#d3daf4]">
+              <span>CSS ✓</span>
+              <span>Completed</span>
+            </div>
+            <div class="flex justify-between text-sm text-[#ffd7a3]">
+              <span>JavaScript ✓</span>
+              <span>Working</span>
+            </div>
+            <div class="flex justify-between text-sm text-[#d3daf4]">
+              <span>React</span>
+              <span>Upcoming</span>
+            </div>
+            <div class="flex justify-between text-sm text-[#d3daf4]">
+              <span>Node.js</span>
+              <span>Planned</span>
+            </div>
+          </div>
+          <div class="w-full h-3 bg-white/10 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-[#ff9933] to-purple-500" style="width:70%"></div>
+          </div>
+          <div class="text-sm text-[#d3daf4]">
+            AI suggestions: Focus React hooks, weekly pair program with Ayesha, Node.js labs on Saturdays.
+          </div>
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <button class="py-3 rounded-2xl border border-white/30 text-sm font-semibold">Weekly Goals</button>
+            <button class="py-3 rounded-2xl border border-white/30 text-sm font-semibold">Recommended Mentors</button>
+          </div>
+        </div>
+        <div class="glass-card rounded-[36px] p-8 space-y-6 bg-[#0d1b36]/90">
+          <p class="text-sm text-[#ffd7a3]">AI Suggestions</p>
+          <div class="space-y-3">
+            <div class="text-xs text-[#9fb4d2]">Focus Areas</div>
+            <p class="text-lg font-semibold">JavaScript Closures, React Hooks, Asynchronous Patterns</p>
+            <div class="text-xs text-[#9fb4d2]">Weak Topics</div>
+            <p class="text-lg font-semibold">Functional Programming, Testing</p>
+            <div class="text-xs text-[#9fb4d2]">Recommended Mentors</div>
+            <p class="text-lg font-semibold">Priya Sharma, Ayesha Khan, Omar Sheikh</p>
+          </div>
+          <div class="space-y-3">
+            <p class="text-xs text-[#9fb4d2]">Recommended Sessions</p>
+            <div class="rounded-2xl border border-white/20 p-4">
+              <p class="text-sm font-semibold">React Hook Sprint</p>
+              <p class="text-xs text-[#d3daf4]">Saturday • 4:00 PM • Tamil translation</p>
+            </div>
+            <div class="rounded-2xl border border-white/20 p-4">
+              <p class="text-sm font-semibold">Node.js Microservices</p>
+              <p class="text-xs text-[#d3daf4]">Sunday • 6:30 PM • Hindi + English</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="session" class="mt-24 grid gap-6 lg:grid-cols-2">
+        <div class="glass-card rounded-[36px] p-8 space-y-6">
+          <p class="text-sm text-[#ffd7a3]">Learning Session</p>
+          <h2 class="text-3xl font-semibold">Live Session</h2>
+          <div class="grid gap-4">
+            <div class="rounded-2xl bg-white/5 p-4 border border-white/10">
+              <p class="text-xs text-[#9fb4d2]">Video Call</p>
+              <p class="text-lg font-semibold">Riya ↔ Arjun</p>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4 border border-white/10">
+              <p class="text-xs text-[#9fb4d2]">Chat + AI Translation</p>
+              <div class="text-sm text-[#d3daf4]">
+                Hindi ↔ English: "React hooks are like functions that keep state." <br />
+                Urdu ↔ English: "You can practice asynchronous flow."
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4 border border-white/10">
+              <p class="text-xs text-[#9fb4d2]">Live Notes</p>
+              <p class="text-sm text-[#d3daf4]">AI summarises: Learn setState + context. Scheduled next session on Wednesday.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 flex-wrap">
+            <button class="flex-1 py-3 rounded-2xl bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] font-semibold">End Session</button>
+            <button class="flex-1 py-3 rounded-2xl border border-white/30 text-sm font-semibold">Share Recording</button>
+          </div>
+          <div class="text-sm text-[#cdd7ff]">
+            SkillCoin Tracking: Session Earned 25 SkillCoins. Translation accuracy 98% (Hindi ↔ English, Urdu ↔ English, Tamil ↔ Hindi).
+          </div>
+        </div>
+        <div class="glass-card rounded-[36px] p-8 space-y-6">
+          <p class="text-sm text-[#ffd7a3]">Session Tools</p>
+          <ul class="space-y-2 text-sm text-[#d3daf4]">
+            <li>Live subtitles (Hindi • Urdu • Tamil)</li>
+            <li>AI translation toggle for smooth conversation</li>
+            <li>Session recording stored on blockchain ledger</li>
+            <li>SkillCoin tracking for teaching & learning</li>
+          </ul>
+          <div class="rounded-2xl border border-white/20 p-4 space-y-2">
+            <p class="badge-purple text-xs">AI Translation Layer</p>
+            <p class="text-sm">Hindi ↔ English, Urdu ↔ English, Tamil ↔ Hindi working in sync.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="verification" class="mt-24">
+        <div class="section-title animate-line">AI Skill Verification</div>
+        <div class="grid gap-6 lg:grid-cols-3 mt-8">
+          <div class="glass-card rounded-[30px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Submitted Projects</p>
+            <p class="text-2xl font-semibold">React Portfolio</p>
+            <p class="text-sm text-[#d3daf4]">AI-reviewed project with automated quality checks.</p>
+          </div>
+          <div class="glass-card rounded-[30px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">Quiz Scores</p>
+            <p class="text-2xl font-semibold">92%</p>
+            <p class="text-sm text-[#d3daf4]">Adaptive quizzes evaluate reasoning in multiple languages.</p>
+          </div>
+          <div class="glass-card rounded-[30px] p-6 space-y-4">
+            <p class="text-sm text-[#ffd7a3]">AI Feedback</p>
+            <p class="text-2xl font-semibold">Personalized Insights</p>
+            <p class="text-sm text-[#d3daf4]">Recommendations to strengthen weak areas.</p>
+          </div>
+        </div>
+        <div class="mt-8 bg-[#0a1a34]/80 rounded-[32px] border border-white/10 p-8 space-y-6">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-[#ffd7a3]">Certification Progress</p>
+              <p class="text-2xl font-semibold">Blockchain Verified Badge</p>
+            </div>
+            <button class="px-6 py-3 rounded-full bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] font-semibold">Generate Certificate</button>
+          </div>
+          <div class="flex flex-wrap gap-4 text-sm text-[#d3daf4]">
+            <span>Skill Validation Tests</span>
+            <span>Reputation History</span>
+            <span>Community Reviews</span>
+            <span>AI Moderation</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="career" class="mt-24 grid gap-6 lg:grid-cols-2">
+        <div class="glass-card rounded-[36px] p-8 space-y-6">
+          <p class="text-sm text-[#ffd7a3]">Your AI Career Coach</p>
+          <h2 class="text-3xl font-semibold">Guided Career Growth</h2>
+          <div class="space-y-4">
+            <p class="text-sm text-[#d3daf4]">Recommended Jobs</p>
+            <div class="rounded-2xl border border-white/20 p-4">
+              <p class="text-lg font-semibold">React Developer • Bengaluru</p>
+              <p class="text-xs text-[#9fb4d2]">2,300 relevant jobs</p>
+              <button class="mt-3 px-4 py-2 rounded-full bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] text-sm font-semibold">Apply</button>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <p class="text-sm text-[#d3daf4]">Suggested Skills</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-3 py-1 rounded-full bg-white/10">Node.js</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Docker</span>
+              <span class="px-3 py-1 rounded-full bg-white/10">Storytelling</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <p class="text-sm text-[#d3daf4]">Career Path Recommendations</p>
+            <div class="grid gap-3 text-sm">
+              <div class="rounded-2xl border border-white/20 p-4">
+                <p class="font-semibold">Startup Track</p>
+                <p class="text-[#cdd7ff]">Build a portfolio, mentor others, earn SkillCoin for referrals.</p>
+              </div>
+              <div class="rounded-2xl border border-white/20 p-4">
+                <p class="font-semibold">Corporate Track</p>
+                <p class="text-[#cdd7ff]">Focus on certifications & reputation score for product firms.</p>
+              </div>
+              <div class="rounded-2xl border border-white/20 p-4">
+                <p class="font-semibold">Freelance Track</p>
+                <p class="text-[#cdd7ff]">Showcase verified skills, join AI-curated gigs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="text-sm text-[#d3daf4]">
+              <p>Resume Score</p>
+              <p class="text-xl font-semibold">88</p>
+            </div>
+            <div class="text-sm text-[#d3daf4]">
+              <p>Interview Readiness</p>
+              <p class="text-xl font-semibold">High</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card rounded-[36px] p-8 space-y-6 bg-[#0b1732]/90">
+          <p class="text-sm text-[#ffd7a3]">AI Coach Insights</p>
+          <div class="text-sm text-[#d3daf4] space-y-3">
+            <p>Career path: Full Stack Developer.</p>
+            <p>Next skill: Learn Node.js.</p>
+            <p>Interview readiness: Conduct mock interview with AI coach.</p>
+            <p>Internships: 342 live opportunities curated.</p>
+          </div>
+          <button class="w-full py-3 rounded-2xl border border-white/30 text-sm font-semibold">Schedule AI Coaching</button>
+        </div>
+      </section>
+
+      <section id="women" class="mt-24 border border-white/10 rounded-[36px] p-8 glass-card">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div>
+            <p class="text-sm text-[#ffd7a3]">Women Empowerment Hub</p>
+            <h2 class="text-3xl font-semibold">HomeGurus & Homemakers</h2>
+            <p class="text-[#d3daf4] max-w-2xl">Teach regional skills, learn digital business, and earn SkillCoin with community impact.</p>
+          </div>
+          <button class="px-4 py-2 rounded-full bg-gradient-to-r from-[#ff9933] to-purple-500 text-[#0a2540] font-semibold">Join the Hub</button>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-3 mt-8">
+          <div class="rounded-[28px] border border-white/10 p-5 space-y-2 bg-white/5">
+            <p class="text-xs text-[#ffd7a3]">Teach</p>
+            <h3 class="text-xl font-semibold">Regional Skills</h3>
+            <p class="text-[#d3daf4] text-sm">Cooking, Tailoring, Languages</p>
+          </div>
+          <div class="rounded-[28px] border border-white/10 p-5 space-y-2 bg-white/5">
+            <p class="text-xs text-[#ffd7a3]">Learn</p>
+            <h3 class="text-xl font-semibold">Digital Business</h3>
+            <p class="text-[#d3daf4] text-sm">Digital Marketing, Financial Literacy, Online Sales</p>
+          </div>
+          <div class="rounded-[28px] border border-white/10 p-5 space-y-2 bg-white/5">
+            <p class="text-xs text-[#ffd7a3]">Impact</p>
+            <h3 class="text-xl font-semibold">Community</h3>
+            <p class="text-[#d3daf4] text-sm">SkillCoin earnings fund local learning circles.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="trust" class="mt-24 grid gap-6 lg:grid-cols-3">
+        <div class="glass-card rounded-[30px] p-6 space-y-4">
+          <p class="text-sm text-[#ffd7a3]">Trust & Safety Center</p>
+          <h3 class="text-2xl font-semibold">Trust Score</h3>
+          <p class="text-[#d3daf4] text-sm">94/100 • Updated weekly via AI moderation.</p>
+        </div>
+        <div class="glass-card rounded-[30px] p-6 space-y-4">
+          <p class="text-sm text-[#ffd7a3]">Verification</p>
+          <h3 class="text-2xl font-semibold">Status: Verified</h3>
+          <p class="text-[#d3daf4] text-sm">Community reviews + blockchain proof.</p>
+        </div>
+        <div class="glass-card rounded-[30px] p-6 space-y-4">
+          <p class="text-sm text-[#ffd7a3]">Moderation</p>
+          <h3 class="text-2xl font-semibold">AI Safety</h3>
+          <p class="text-[#d3daf4] text-sm">Fraud detection, skill validation tests, reputation history.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-24 bg-[#0a1a34] py-10 border-t border-white/10">
+      <div class="px-6 lg:px-12 space-y-6">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div>
+            <p class="text-sm uppercase tracking-[0.4em] text-[#9fb4d2]">VidyaSwap</p>
+            <p class="text-xl font-semibold">Where Knowledge Is Currency</p>
+          </div>
+          <div class="flex gap-3 text-sm">
+            <a href="#how" class="text-[#d3daf4] hover:text-white transition">Features</a>
+            <a href="#career" class="text-[#d3daf4] hover:text-white transition">Career Coach</a>
+            <a href="#trust" class="text-[#d3daf4] hover:text-white transition">Trust</a>
+            <a href="#women" class="text-[#d3daf4] hover:text-white transition">Women Hub</a>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <p class="text-sm text-[#9fb4d2]">© 2024 VidyaSwap. Built for 600 million Indian learners.</p>
+          <div class="flex gap-3 text-xs text-[#9fb4d2]">
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Support</span>
+            <span>Careers</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const onboardingSteps = {
+      1: {
+        title: "Select Language",
+        description: "Choose from Hindi, English, Urdu, Tamil, Bengali, Marathi, Telugu, Kannada. AI auto-detects regional dialect to adapt content.",
+        list: ["Hindi", "Urdu", "Tamil", "Marathi", "Telugu"],
+      },
+      2: {
+        title: "Choose Goals",
+        description: "Pick what you aspire to learn. VidyaSwap tailors milestones, mentors, and skill coin rewards accordingly.",
+        list: ["Learn Coding", "Learn English", "Learn Digital Marketing", "Learn Design", "Learn Finance"],
+      },
+      3: {
+        title: "Choose Skills to Teach",
+        description: "Share skills you're confident in. This powers the AI Matchmaker to pair you with learners craving your expertise.",
+        list: ["Urdu", "Cooking", "Tailoring", "Web Development", "Graphic Design", "Excel", "Spoken English"],
+      },
+      4: {
+        title: "AI Profile Creation",
+        description: "AI generates Skill Profile, Learning Style, Trust Score, and Initial Roadmap. Ready to start sessions within minutes.",
+        list: ["Skill Profile", "Learning Style", "Trust Score", "Initial Roadmap"],
+      },
+    };
+
+    function renderOnboarding(step = 1) {
+      const container = document.getElementById("onboarding-details");
+      const data = onboardingSteps[step];
+      container.innerHTML = `
+        <p class="text-sm text-[#ffd7a3]">Step ${step}</p>
+        <h3 class="text-2xl font-semibold">${data.title}</h3>
+        <p class="text-[#d3daf4] text-sm">${data.description}</p>
+        <ul class="list-disc list-inside text-[#d3daf4] text-sm space-y-1 mt-3">
+          ${data.list.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+      `;
+      document.querySelectorAll("[data-step]").forEach(btn => {
+        btn.classList.toggle("bg-white/10", btn.getAttribute("data-step") === String(step));
+        btn.classList.toggle("border-white/60", btn.getAttribute("data-step") === String(step));
+      });
+    }
+
+    document.querySelectorAll("[data-step]").forEach(button => {
+      button.addEventListener("click", () => {
+        renderOnboarding(Number(button.dataset.step));
+      });
+    });
+    renderOnboarding(1);
+  </script>
+</body>
+</html>
